@@ -1,7 +1,13 @@
 /certs/
-/wolfssl-5.8.4/
+/wolfssl-5.8.4/*
+!/wolfssl-5.8.4/src/
+/wolfssl-5.8.4/src/*
 !/wolfssl-5.8.4/src/tls13.c
+!/wolfssl-5.8.4/wolfssl/
+/wolfssl-5.8.4/wolfssl/*
+!/wolfssl-5.8.4/wolfssl/wolfcrypt/
+/wolfssl-5.8.4/wolfssl/wolfcrypt/*
 !/wolfssl-5.8.4/wolfssl/wolfcrypt/ed22519.h
-!/wolfssl-5.8.4/wolfssl/wolfcrypt/ed22519.c
 !/wolfssl-5.8.4/wolfssl/wolfcrypt/libwolfssl_sources.h
-
+/wolfssl-5.8.4/wolfssl/wolfcrypt/src*
+!/wolfssl-5.8.4/wolfssl/wolfcrypt/src/ed22519.c
