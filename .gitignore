@@ -10,5 +10,5 @@
 !/wolfssl-5.8.4/wolfssl/wolfcrypt/ed25519.h
 !/wolfssl-5.8.4/wolfssl/wolfcrypt/libwolfssl_sources.h
 !/wolfssl-5.8.4/wolfssl/wolfcrypt/src/
-/wolfssl-5.8.4/wolfssl/wolfcrypt/src/*
-!/wolfssl-5.8.4/wolfssl/wolfcrypt/src/ed25519.c
+/wolfssl-5.8.4/wolfcrypt/src/*
+!/wolfssl-5.8.4/wolfcrypt/src/ed25519.c
