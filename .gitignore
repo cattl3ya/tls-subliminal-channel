@@ -1,4 +1,6 @@
 /certs/
+/https_server
+/https_client
 /wolfssl-5.8.4/**
 !/wolfssl-5.8.4/wolfcrypt/
 !/wolfssl-5.8.4/wolfcrypt/src/
