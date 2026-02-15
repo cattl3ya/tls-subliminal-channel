@@ -13,12 +13,12 @@ For a full overview of this project and the details behind its implementation, [
 
 # Build Instructions
 1. `git clone https://github.com/cattl3ya/tls-subliminal-channel.git`
-2. `git clone https://github.com/wolfSSL/wolfssl.git`
-3. Copy the files from `./tls-subliminal-channel/wolfssl-5.8.4/` to `./wolfssl-5.8.4/` to overwrite ed25519.c, ed25519.h, tls13.c, and libwolfssl_sources.h
-4. Build WolfSSL with the options `./configure --disable-shared --enable-opensslall --enable-ed25519 --enable-certgen --enable-opensslextra --enable-savecert --enable-keylog-export` and build with `make`
-5. Either edit the `WOLFSSL_LIB = ./wolfssl-5.8.4/lib/libwolfssl.a` in the makefile to point to the location of your patched WolfSSL library, or copy the patched library into the expected directory with `mkdir ./tls-subliminal-channel/wolfssl-5.8.4/lib && cp ./wolfssl-5.8.4/src/.libs/libwolfssl.a ./tls-subliminal-channel/wolfssl-5.8.4/lib`
-6. Run `make certs` to generate the certificates
-7. Run `make` to compile the client and server
+2. Get WolfSSL 5.8.4: `curl -LO https://github.com/wolfSSL/wolfssl/archive/refs/tags/v5.8.4-stable.zip` and `unzip v5.8.4-stable.zip`
+3. Copy the files from `./tls-subliminal-channel/wolfssl-5.8.4/` to `./wolfssl-5.8.4-stable/` to overwrite ed25519.c, ed25519.h, tls13.c, and libwolfssl_sources.h: `cp -rv ./tls-subliminal-channel/wolfssl-5.8.4/* ./wolfssl-5.8.4-stable`
+4. Build WolfSSL: `cd ./wolfssl-5.8.4-stable`, `./autogen.sh`, `./configure --disable-shared --enable-opensslall --enable-ed25519 --enable-certgen --enable-opensslextra --enable-savecert --enable-keylog-export` and build with `make`. DO NOT INSTALL the compiled library, just leave it alone and it will be statically linked when you build the client and server.
+5. `cd ../tls-subliminal-channel`
+6. Run `make` to compile the client and server
+7. Run `make certs` to generate the certificates
 8. If you want to be able to decrypt the traffic, set `export SSLKEYLOGFILE=./ssl_key_log.txt` in your terminal
 9. Using tmux or another terminal window, start the server first with `./https_server`, and then start the client with `./https_client`
 

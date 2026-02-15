@@ -1,7 +1,7 @@
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -I. -I./wolfssl-5.8.4
-WOLFSSL_LIB = ./wolfssl-5.8.4/lib/libwolfssl.a
+CFLAGS = -Wall -Wextra -I. -I../wolfssl-5.8.4-stable
+WOLFSSL_LIB = ../wolfssl-5.8.4-stable/src/.libs/libwolfssl.a
 LDFLAGS = $(WOLFSSL_LIB) -lm -lpthread
 
 # Targets

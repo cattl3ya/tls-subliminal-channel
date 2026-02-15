@@ -5,9 +5,9 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include "wolfssl-5.8.4/wolfssl/options.h"
-#include "wolfssl-5.8.4/wolfssl/ssl.h"
-#include "wolfssl-5.8.4/wolfssl/wolfcrypt/ed25519.h"
+#include <wolfssl/options.h>
+#include <wolfssl/ssl.h>
+#include <wolfssl/wolfcrypt/ed25519.h>
 #include <wolfssl/wolfcrypt/libwolfssl_sources.h>
 #include <wolfssl/wolfcrypt/sha512.h>
 #include <wolfssl/wolfcrypt/ge_operations.h>
